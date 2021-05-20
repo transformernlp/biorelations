@@ -1,0 +1,16 @@
+* {
+  /* margin: 0px;
+  padding: 0px; */
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.child {
+  float: left;
+  width: 50%;
+}
+
+.footer {
+  margin-top: 22%;
+  margin-bottom: 0%;
+}

@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="styles.css">
-    <title>Biomedical Relations</title>
-  </head>
-  
-  <body style="background-color:rgb(245,245,245);">
 
-    <h2 style="text-align: center">Biomedical Relation Repository</h2>
-    <hr width="50%" align='center'>
-    <br />
-    <form style="text-align: center">
-      <label for="fname">Query entity : </label>
-      <input type="text" id="query" name="query" />
-      <button type="button" id="search_btn" onclick="get_rels()">
-        Get Relations
-      </button>
-    </form>
-    <br />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Biomedical Relations</title>
+</head>
 
-    <section id="main_div" class="parent">
-      <section class="child">
-        <section id="cause_div" style="margin-left: 50%;"></section>
-      </section>
+<body style="background-color:rgb(245,245,245);">
 
-      <section class="child">
-        <section id="treat_div" style="margin-left: 20%;"></section>
-      </section>
+  <h2 style="text-align: center;">Biomedical Relation Repository</h2>
+  <hr width="50%" align='center'>
+  <!-- <br /> -->
+  <form autocomplete="off" style="text-align: center; margin-top: 15px;">
+    <!-- <label for="fname">Query Entity : </label> -->
+    <div class="autocomplete">
+      <input type="text" id="query" name="query" placeholder="Biomedical Entity"/>
+    </div>
+    <!-- <input id="search_btn" onclick="get_rels()" type="submit"> -->
+    <button type="button" id="search_btn" onclick="get_rels()" class="search_btn">
+      Get Relations
+    </button>
+  </form>
+  <br />
+
+  <section id="main_div" class="parent">
+    <section class="child">
+      <section id="cause_div" style="margin-left: 50%;"></section>
     </section>
 
+    <section class="child">
+      <section id="treat_div" style="margin-left: 20%;"></section>
+    </section>
+  </section>
 
-<!--  Footer starts here -->
-    <div class="footer" >
-    
+
+  <!--  Footer starts here -->
+  <div class="footer">
+
     <hr style="width:100%;">
     <h3>How it works? </h3>
-    <p>Enter the Biomedical Entity in the search box above to view the possible <strong>'caused by'</strong> and <strong>'treated by'</strong> relations.</p>
+    <p>Enter the Biomedical Entity in the search box above to view the possible <strong>'caused by'</strong> and
+      <strong>'treated by'</strong> relations.
+    </p>
     <!-- <h4>Additional Info : </h4>
     <p>The Biomedical Relation Repository contain 'caused by' and 'treated by' relations for various medical entities.</p> -->
-    <strong>Note :</strong>These relations are extracted from PubMed abstracts in an unsupervised way and haven't evaluated by domain experts. So if you find any discrepancies, feel free to raise an issue or give a feedback in the <a href="https://github.com/transformernlp/biorelations/issues">Github issues section</a>.
+    <p><strong>Note: </strong>These relations are extracted from PubMed abstracts in an unsupervised way and haven't
+      evaluated by domain experts. So if you find any discrepancies, feel free to raise an issue or give a feedback in
+      the
+      <a href="https://github.com/transformernlp/biorelations/issues">Github issues section</a>.
+    </p>
 
     <!--  Footer ends here-->
   </div>
-    <script src="biorel.js">
-      
-    </script>
-  </body>
+  <script src="styles/biorel.js">
+
+  </script>
+</body>
+
 </html>
